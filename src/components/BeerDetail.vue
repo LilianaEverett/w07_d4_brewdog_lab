@@ -1,18 +1,21 @@
 <template lang="html">
   <div id="detailWrapper">
+
     <div v-if="beer">
       <ul class="detailData">
-        <li>Name: {{ beer.name }}</li>
+        <li class="name">Name: {{ beer.name }}</li>
         <li>ABV: {{ beer.abv }}</li>
         <li>Description: {{beer.description}}</li>
+
+        <beer-fav :beer="beer"></beer-fav>
+
       </ul>
+      </div>
+
       <div>
         <img :src="beer.image_url" :alt="beer.name">
       </div>
 
-      <beer-fav :beer="beer"></beer-fav>
-
-    </div>
   </div>
 </template>
 
@@ -33,19 +36,26 @@ export default {
 
 <style lang="css" scoped>
 img {
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 20px;
   height: 300px;
 }
 #detailWrapper {
-/* display: flex; */
-flex-direction: row;
-box-sizing: border-box;
-background: #cbc8b9;
-padding: 10px;
-height: 500px;
-
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background: #cbc8b9;
+  padding: 10px;
+  height: 400px;
+  margin-top: 30px;
 }
 
-.detailData {
-  width: 60%;
+.name {
+  font-size: 24px;
+}
+
+ul{
+  list-style-type: none;
 }
 </style>

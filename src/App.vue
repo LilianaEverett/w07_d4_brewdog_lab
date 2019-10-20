@@ -7,7 +7,6 @@
     <beer-dropdown :beers="beers"></beer-dropdown>
     <beer-detail :beer="selectedBeer"></beer-detail>
   </div>
-  </div>
 </template>
 
 <script>
@@ -49,14 +48,24 @@ export default {
 </script>
 
 <style lang="css" scoped>
+div {
+  font-family: arial;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 h1 {
+  font-family: arial;
   text-align: center;
   color: #333;
 }
 .main-container {
+  font-family: arial;
   display: flex;
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
 }
+
+
 </style>

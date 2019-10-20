@@ -12,7 +12,6 @@ import { eventBus } from '../main.js'
 export default {
   name: 'fav-list',
   props: ['favBeers']
-  
 }
 </script>
 

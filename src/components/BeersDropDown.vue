@@ -27,4 +27,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
+form {
+  margin-left: 20px;
+  margin-top: 20px;
+}
 </style>
